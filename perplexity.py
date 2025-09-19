@@ -23,9 +23,7 @@ class Pipe:
         """Configuration for the pipeline valves."""
 
         PERPLEXITY_API_URL: str = Field(
-            default_factory=lambda: os.environ.get(
-                "LITELLM_API_URL", "https://litellm.ai.viadee.cloud"
-            ),
+            default_factory=lambda: os.environ.get("LITELLM_API_URL", ""),
             description="Base URL for the Litellm API.",
         )
         PERPLEXITY_API_KEY: str = Field(
